@@ -1,36 +1,42 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Neural Network Visualizer
 
-## Getting Started
+An interactive 3D visualization of a neural network built with **Next.js, React Three Fiber, and Three.js**.
 
-First, run the development server:
+The project transforms a neural network's architecture and learned weights into an interactive 3D scene, allowing you to explore neurons, connections, layer structure, and individual weights visually.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+##  Features
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+*  **3D Neural Network Visualization**
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+  * Visualize neurons and layers as a 3D network.
+  * Supports arbitrary layer sizes from a JSON network definition.
 
-## Learn More
+*  **Weighted Connections**
 
-To learn more about Next.js, take a look at the following resources:
+  * Every connection represents a learned weight.
+  * Positive and negative weights are visually differentiated.
+  * Connection thickness changes when hovered.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+*  **Interactive Neurons**
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+  * Click individual neurons to inspect them.
+  * Selected neurons are highlighted and enlarged.
+  * Displays the neuron's bias value.
 
-## Deploy on Vercel
+*  **3D Camera Controls**
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+  * Rotate around the network.
+  * Zoom in and out.
+  * Pan across the scene.
+  * Smooth camera damping using `OrbitControls`.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+*  **Network Architecture**
+
+  * Input, hidden, and output layers are positioned automatically.
+  * Neuron spacing adapts to the number of neurons in each layer.
+
+*  **GLB Export**
+
+  * Export the visualized network as a `.glb` 3D model.
+  * Exported geometry can be opened in Blender, Three.js, or other 3
